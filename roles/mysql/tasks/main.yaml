@@ -3,11 +3,12 @@
     name: mysql-server
     state: present
 
-- name: setting root & password
-  ansible.builtin.command: mysql_secure_installation --set-uroot-pass "{{ MYSQL_ROOT_PASSWORD }}"
-
 - name: start and enable mysql
   ansible.builtin.service:
     name: mysqld
     state: restarted
     enabled: yes
+
+- name: setting root & password
+  ansible.builtin.command: mysql_secure_installation --set-uroot-pass "{{ MYSQL_ROOT_PASSWORD }}"
+
