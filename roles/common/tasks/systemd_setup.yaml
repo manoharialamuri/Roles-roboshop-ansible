@@ -3,7 +3,7 @@
     daemon_reload: true
     name: "{{ component }}"
 
-- name: start and enable catalogue
+- name: start and enable
   ansible.builtin.service:
     name: "{{ component }}"
     state: restarted
