@@ -1,0 +1,21 @@
+- name: html setup
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: html_setup.yaml
+
+- name: nginx setup
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: nginx_setup.yaml
+
+- name: copy {{ component }}
+  ansible.builtin.template:
+    src: "{{ component }}.config.j2"
+    dest: /etc/nginx/{{ component }}.conf
+    
+
+- name: start and enable {{ component }}
+  ansible.builtin.service:
+    name: "{{ component }}"
+    state: restarted
+    enabled: yes
