@@ -17,8 +17,8 @@
     
 - name: creating user and password
   community.rabbitmq.rabbitmq_user:
-    user: roboshop
-    password: roboshop123
+    user: "{{ RABBITMQ_USER }}"
+    password: "{{ RABBITMQ_PASSWORD }}"
     permissions:
       - vhost: /
         configure_priv: .*
