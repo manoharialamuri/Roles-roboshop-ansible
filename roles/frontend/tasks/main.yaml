@@ -8,14 +8,14 @@
     name: common
     tasks_from: nginx_setup.yaml
 
-- name: copy {{ component }}
+- name: copy nginx
   ansible.builtin.template:
-    src: "{{ component }}.config.j2"
-    dest: /etc/nginx/{{ component }}.conf
+    src: nginx.config.j2
+    dest: /etc/nginx/nginx.conf
     
 
-- name: start and enable {{ component }}
+- name: start and enable nginx
   ansible.builtin.service:
-    name: "{{ component }}"
+    name: nginx
     state: restarted
     enabled: yes
