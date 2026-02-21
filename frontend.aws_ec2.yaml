@@ -7,3 +7,6 @@ hostnames:
 filters:
   instance-state-name: running
   tag:Name: frontend-dev
+keyed_groups:
+- key: tags.Role
+  prefix: role
