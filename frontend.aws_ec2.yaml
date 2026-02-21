@@ -14,7 +14,7 @@
 #   key: tags.component
 
 
-# inventory/aws_ec2.yml
+# inventory/aws_ec2.yml for mongodb dyanamically taking private ip address
 plugin: amazon.aws.aws_ec2
 regions:
 - us-east-1
