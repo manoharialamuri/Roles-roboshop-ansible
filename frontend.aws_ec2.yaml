@@ -9,4 +9,4 @@ filters:
   tag:Name: frontend-dev
 keyed_groups:
 - key: tags.Name
-  prefix: Name
+  prefix: " "
