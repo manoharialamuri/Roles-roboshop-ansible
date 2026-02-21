@@ -2,6 +2,10 @@
   ansible.builtin.debug:
     msg: "Hi from testimg-1"
 
+- name: setting dynamic variable
+  ansible.builtin.set_fact:
+    os ="debian"
+
 - name: testing-2
   ansible.builtin.debug:
     msg: "Hi from testimg-2"
