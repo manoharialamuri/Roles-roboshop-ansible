@@ -5,4 +5,5 @@ regions:
 hostnames:
 - private-ip-address
 filters:
+instance-state-name: running
 tag:Environment: frontend-dev
