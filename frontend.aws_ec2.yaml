@@ -8,5 +8,5 @@ filters:
   instance-state-name: running
   tag:Name: frontend-dev
 keyed_groups:
-- key: tags.Name
+- key: tag.Name
   prefix: " "
