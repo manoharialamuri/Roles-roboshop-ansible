@@ -4,7 +4,7 @@
 
 - name: setting dynamic variable
   ansible.builtin.set_fact:
-    os ="debian"
+    os: "debian"
 
 - name: testing-2
   ansible.builtin.debug:
