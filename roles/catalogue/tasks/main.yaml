@@ -8,8 +8,8 @@
 - name: nodejs_setup
   tags:
   - deployment
-  ansible.builtin.import_role:
-  # ansible.builtin.inculde_role:
+  #ansible.builtin.import_role:
+  ansible.builtin.inculde_role:
   #in include role tags do not apply to all tasks in nodejs_setup.yaml file if you want to run specific task in nodejs file we have to give it to that particular task
     name: common
     tasks_from: nodejs_setup.yaml
