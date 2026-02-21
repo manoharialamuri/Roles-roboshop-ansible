@@ -7,9 +7,9 @@ hostnames:
 filters:
   instance-state-name: running
   tag:Name: frontend-dev
+compose:
+ansible_host: private-ip-address
 keyed_groups:
 - key: tags.Name
   prefix: " "
 
-compose:
-ansible_host: private-ip-address
