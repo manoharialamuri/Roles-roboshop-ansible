@@ -8,6 +8,6 @@
 
 - name: Install packages
   tags:
-  - usingtags #we can use any word to represents tags
+  - deployment #usingtags #we can use any word to represents tags
   community.general.npm:
     path: /app
